@@ -1,5 +1,5 @@
-const PANEL_ID = "dsh-split-view"
-const STYLE_TAG_ID = "dsh-split-view/panel.css"
+const PANEL_ID = "dsh-split-panel"
+const STYLE_TAG_ID = "dsh-split-panel/panel.css"
 
 export function installStyles(css) {
   if (typeof document === "undefined") return () => {}
