@@ -1,5 +1,5 @@
 {
-  "name": "dsh-split-view",
+  "name": "dsh-split-panel",
   "version": "0.1.0",
   "private": true,
   "description": "DSH split-screen panel: show several running conversations side by side, one screen per task.",
