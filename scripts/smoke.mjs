@@ -26,7 +26,7 @@ new Function(code)()
 
 assert.equal(loaded.length, 1, "bundle must register exactly one module")
 const [record] = loaded
-assert.equal(record.id, "dsh-split-view")
+assert.equal(record.id, "dsh-split-panel")
 
 const jsxRuntime = await import("react/jsx-runtime")
 const requireStub = (specifier) => {
@@ -65,12 +65,12 @@ api.apply(ctx)
 
 assert.deepEqual(
   registrations.map((row) => row.spec.name),
-  ["sidebar.panellist", "sidebar.workspaces.session.row.action", "main", "dsh-split-view.pane"],
+  ["sidebar.panellist", "sidebar.workspaces.session.row.action", "main", "dsh-split-panel.pane"],
 )
 
 const main = registrations.find((row) => row.spec.name === "main")
-assert.equal(main.spec.key, "dsh-split-view")
-assert.deepEqual(main.spec.children, { "dsh-split-view.pane": { kind: "single", scope: "session" } })
+assert.equal(main.spec.key, "dsh-split-panel")
+assert.deepEqual(main.spec.children, { "dsh-split-panel.pane": { kind: "single", scope: "session" } })
 assert.deepEqual(main.spec.inject().sessions, sessions)
 
 const rows = {
@@ -106,7 +106,7 @@ assert.match(selectedHtml, /aria-pressed="true"/)
 const unselectedHtml = renderToStaticMarkup(React.createElement(toggle, { sessionId: "s2", displayTitle: "任务二" }))
 assert.match(unselectedHtml, /aria-pressed="false"/)
 
-const pane = registrations.find((row) => row.spec.name === "dsh-split-view.pane").component
+const pane = registrations.find((row) => row.spec.name === "dsh-split-panel.pane").component
 let captured = null
 renderToStaticMarkup(
   React.createElement(pane, {
