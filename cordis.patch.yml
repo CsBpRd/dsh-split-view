@@ -1,6 +1,6 @@
-# dsh-split-view bundle patch: one host row over the Desktop profile.
+# dsh-split-panel bundle patch: one host row over the Desktop profile.
 # The row name resolves from the profile's own node_modules, where the
 # `link:` dependency installed this package.
 - insert:
-    - id: dsh-split-view
-      name: dsh-split-view
+    - id: dsh-split-panel
+      name: dsh-split-panel
