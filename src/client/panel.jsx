@@ -115,7 +115,7 @@ class PaneBoundary extends Component {
   }
 
   componentDidCatch(error) {
-    console.warn("[dsh-split-view] pane failed to render:", error)
+    console.warn("[dsh-split-panel] pane failed to render:", error)
   }
 
   render() {
@@ -255,7 +255,7 @@ const SplitPane = memo(function SplitPane({
           unavailable ? <div data-split-pane-fallback>会话不可用</div> : <div data-split-pane-idle />
         ) : visible ? (
           <PaneBoundary>
-            <SessionProvider session={reference}>{renderSlot("dsh-split-view.pane", PANE_SLOT_PROPS)}</SessionProvider>
+            <SessionProvider session={reference}>{renderSlot("dsh-split-panel.pane", PANE_SLOT_PROPS)}</SessionProvider>
           </PaneBoundary>
         ) : (
           <div data-split-pane-idle />
