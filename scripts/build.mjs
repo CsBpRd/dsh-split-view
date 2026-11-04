@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url"
 import { build } from "esbuild"
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
-const id = "dsh-split-view"
+const id = "dsh-split-panel"
 
 const result = await build({
   absWorkingDir: root,
