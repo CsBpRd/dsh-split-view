@@ -25,12 +25,12 @@ export function apply(ctx) {
       {
         name: "main",
         key: PANEL_ID,
-        children: { "dsh-split-view.pane": { kind: "single", scope: "session" } },
+        children: { "dsh-split-panel.pane": { kind: "single", scope: "session" } },
         inject: () => ({ sessions: ctx.sessions, layout: ctx.get("layout") }),
       },
       SplitViewPanel,
     ),
   )
 
-  ctx.slots.inject("dsh-split-view.pane", () => ctx.slots.register({ name: "dsh-split-view.pane" }, PaneConversation))
+  ctx.slots.inject("dsh-split-panel.pane", () => ctx.slots.register({ name: "dsh-split-panel.pane" }, PaneConversation))
 }
