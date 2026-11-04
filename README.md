@@ -1,4 +1,4 @@
-# dsh-split-view
+# dsh-split-panel
 
 DSH 分屏面板：把并行的多个任务并排显示，每屏一个任务的实时对话；另有只报进度的一条条极简视图。
 
@@ -40,8 +40,8 @@ npm run smoke   # 加载契约 + 完整/极简/行切换渲染冒烟
    - `git clone https://github.com/CsBpRd/dsh-split-view.git`
    - `curl -L -o dsh-split-view.tar.gz https://api.github.com/repos/CsBpRd/dsh-split-view/tarball/main && tar xzf dsh-split-view.tar.gz`
 2. 在 DSH 的 profile（`~/.dsh/profiles/desktop/package.json`）里：
-   - `dependencies` 增加 `"dsh-split-view": "link:<仓库所在目录>"`
-   - `dsh.profile.bundles` 增加 `"dsh-split-view"`
+   - `dependencies` 增加 `"dsh-split-panel": "link:<仓库所在目录>"`
+   - `dsh.profile.bundles` 增加 `"dsh-split-panel"`
 3. 在 profile 目录执行 `pnpm install`，重启 DSH NEXT。
 
 ## 边界
