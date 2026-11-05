@@ -1,8 +1,7 @@
 {
   "name": "dsh-split-panel",
   "version": "0.1.0",
-  "private": true,
-  "description": "DSH split-screen panel: show several running conversations side by side, one screen per task.",
+  "description": "Split-screen panel for the DeepSeek Harness web client: parallel sessions side by side, four columns per page with wheel paging, resizable dividers and a progress-only view.",
   "license": "MIT",
   "type": "module",
   "main": "lib/index.js",
@@ -47,5 +46,24 @@
     "esbuild": "^0.25.10",
     "react": "18.3.1",
     "react-dom": "18.3.1"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "split-view",
+    "cordis",
+    "client-plugin"
+  ],
+  "homepage": "https://github.com/CsBpRd/dsh-split-view#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CsBpRd/dsh-split-view.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CsBpRd/dsh-split-view/issues"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
