@@ -36,9 +36,27 @@ npm run smoke   # 加载契约 + 完整/极简/行切换渲染冒烟
 
 ## 安装
 
-1. 取回仓库（任选其一）：
+**一行安装（不需要 npm）：**
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/CsBpRd/dsh-split-view/main/install.sh | bash
+```
+
+脚本通过 GitHub API 下载压缩包，解压到 `~/.dsh/plugins/dsh-split-panel`，把 `link:` 依赖和 bundle 行写进 `~/.dsh/profiles/desktop/package.json`，再用 DSH 自带的 pnpm 安装依赖。装完重启 DSH NEXT。
+
+可选参数：`--profile <名称>`、`--prefix <目录>`、`--branch <ref>`、`--no-install`。
+
+访问不了 `raw.githubusercontent.com` 时，改从 API 取脚本：
+
+```sh
+curl -fsSL -H "Accept: application/vnd.github.raw" https://api.github.com/repos/CsBpRd/dsh-split-view/contents/install.sh | bash
+```
+
+**手动安装：**
+
+1. 取回仓库：
    - `git clone https://github.com/CsBpRd/dsh-split-view.git`
-   - `curl -L -o dsh-split-view.tar.gz https://api.github.com/repos/CsBpRd/dsh-split-view/tarball/main && tar xzf dsh-split-view.tar.gz`
+   - 或 `curl -L -o dsh-split-view.tar.gz https://api.github.com/repos/CsBpRd/dsh-split-view/tarball/main && tar xzf dsh-split-view.tar.gz`
 2. 在 DSH 的 profile（`~/.dsh/profiles/desktop/package.json`）里：
    - `dependencies` 增加 `"dsh-split-panel": "link:<仓库所在目录>"`
    - `dsh.profile.bundles` 增加 `"dsh-split-panel"`
