@@ -36,6 +36,14 @@ npm run smoke   # 加载契约 + 完整/极简/行切换渲染冒烟
 
 ## 安装
 
+**用 npm 安装：**
+
+```sh
+dsh plugin --profile desktop add dsh-split-panel
+```
+
+或直接 `npm i -g dsh-split-panel` 后自行 link。包地址：https://www.npmjs.com/package/dsh-split-panel
+
 **一行安装（不需要 npm）：**
 
 ```sh
